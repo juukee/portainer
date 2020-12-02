@@ -1,0 +1,35 @@
+{
+    "envId":"fscz-faca0",
+    "version":"2.0",
+    "$schema":"https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+    "framework": {
+        "name": "portainer",
+        "plugins": {
+          "client": {
+            "use": "@cloudbase/framework-plugin-container",
+            "inputs": {
+              "serviceName": "portainer",
+              "servicePath": "/",
+              "containerPort": 9000,
+              "envVariables": {},
+              "volumeMounts": {
+                "/data": "cfs-cz1q2249",
+                "/var/run/docker.sock": "cfs-cz1q2249"
+                },
+              "uploadType": "image",
+              "imageInfo": {
+                "imageUrl": "ccr.ccs.tencentyun.com/tcb-913648653-qdkp/portainer"
+              }
+            }
+          }
+        },
+        "requirement": {
+            "addons": [
+              {
+                "type": "CFS",
+                "name": "cfs-cz1q2249"
+              }
+            ]
+          }
+    }
+}
