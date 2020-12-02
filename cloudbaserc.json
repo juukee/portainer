@@ -13,7 +13,8 @@
               "containerPort": 9000,
               "envVariables": {},
               "volumeMounts": {
-                "/data": "cfs-cz1q2249"
+                "/data": "cfs-cz1q2249",
+                "/var/run/docker.sock":"cfs-kvfg3dzz"
                 },
               "uploadType": "image",
               "imageInfo": {
@@ -27,6 +28,10 @@
               {
                 "type": "CFS",
                 "name": "cfs-cz1q2249"
+              },
+              {
+                "type": "CFS",
+                "name": "cfs-kvfg3dzz"
               }
             ]
           }
